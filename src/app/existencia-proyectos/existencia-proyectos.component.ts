@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./existencia-proyectos.component.css']
 })
 export class ExistenciaProyectosComponent implements OnInit {
+  msg: string;
   ngOnInit(): void {
     throw new Error("Method not implemented.");
   }
