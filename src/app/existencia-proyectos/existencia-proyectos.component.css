@@ -4,3 +4,7 @@
     padding: 30px;
     background: #fff;
 }
+
+.mat-sort-header-container {
+    align-items : center;
+ }

@@ -35,7 +35,6 @@ export class ExistenciaProyectosComponent implements OnInit {
       this.msg = 'Proyecto Eliminado';
     }
   }
-
   myValue;
   editEmployee(i):void {
     this.hideUpdate = false;
