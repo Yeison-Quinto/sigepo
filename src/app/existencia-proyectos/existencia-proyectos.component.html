@@ -1,0 +1,165 @@
+<div class="container app">
+    <div class="row"> 
+      <div class="col-sm-8">
+        <h1 class="text-center">
+          Informe de Proyectos Existentes
+        </h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="alert alert-success alert-dismissable" *ngIf="msg">
+            <a href="existencia" class="close" (click)="closeAlert()">
+            &times;
+          </a>
+          {{msg}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="text-left">
+      <h2>Ingresar proyecto:</h2>
+      <form class="form-horizontal">
+
+        <div class="form-group">
+          Nombre del proyecto:     
+          <input type="text" class="form-control" id="name"
+          name="name" [(ngModel)]="model.name"
+          placeholder="Nombre del Proyecto">
+        </div>
+
+        <div class="form-group">
+          Tipo De Proyecto
+          <input type="text" class="form-control" id="tipo"
+          name="tipo" [(ngModel)]="model.tipo"
+          placeholder="Tipo:">
+        </div>
+       
+        <div class="form-group">
+          Fecha de Inicio
+          <input type="date" class="form-control" id="fechaI"
+          name="fechaI" [(ngModel)]="model.fechaI"
+          placeholder="DD-MM-AAAA">
+          </div>
+
+        <div class="form-group">
+         Fecha Final
+          <input type="date" class="form-control" id="fechaF"
+          name="fechaF" [(ngModel)]="model.fechaF"
+          placeholder="DD-MM-AAAA">
+          </div>    
+          
+          <div class="form-group">
+              Porcentaje de Avance
+               <input type="text" class="form-control" id="avance"
+               name="avance" [(ngModel)]="model.avance"
+               placeholder="El Avance es de">
+          </div>
+
+          <div class="form-group">
+              <label for="exampleFormControlFile1">Agregar Archivos Del Proyecto</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+
+        <div class="form-group">
+          
+            <button type="submit" class="btn btn-success" (click)="addEmployee()">
+              Guardar Nuevo Proyecto
+            </button>
+          
+        </div>
+      </form>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+        <h2>Proyectos Guardados</h2>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Fecha Ini</th>
+                <th>Fecha Fin</th>
+                <th>Avance</th>
+                <th>Administrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees; let i = index">
+                <td>{{employee.name}}</td>
+                <td>{{employee.tipo}}</td>
+                <td>{{employee.fechaI}}</td>
+                <td>{{employee.fechaF}}</td>
+                <td>{{employee.avance}}</td>
+                <td>
+                  <a (click)="editEmployee(i)" class="btn btn-success">
+                    Edit
+                  </a>
+                  
+                  <a (click)="deleteEmployee(i)" class="btn btn-danger">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              </tbody>
+          </table>  
+      </div>
+
+    </div>
+    
+
+    <div class="col-sm-4" [hidden]="hideUpdate">
+        <h2>Actualizar:</h2>
+        <form class="form-horizontal">
+          <div class="form-group">
+            Modificar Nombre
+             <input type="text" class="form-control" id="name"
+             name="name" [(ngModel)]="model2.name"
+             placeholder="Modificar el nombre">
+          </div>
+
+          <div class="form-group">
+              Modificar Tipo
+              <input type="text" class="form-control" id="tipo"
+               name="tipo" [(ngModel)]="model2.tipo"
+               placeholder="Modificar el tipo">
+          </div>
+
+          <div class="form-group">
+            Modificar Fecha Final
+            <input type="date" class="form-control" id="fechaF"
+            name="fechaF" [(ngModel)]="model2.fechaF"
+            placeholder="DD-MM-AAAA">
+          </div>
+            
+          <div class="form-group">
+              Modificar Avance
+              <input type="text" class="form-control" id="avance"
+               name="avance" [(ngModel)]="model2.avance"
+               placeholder="Modificar el avance">
+            </div>
+
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button type="submit" class="btn btn-success" (click)="updateEmployee()">
+                Guardar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    
+     
+   
+      
+   
+
+
+  
+
+
+
+
+
+
+
+</div>
