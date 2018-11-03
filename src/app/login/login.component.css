@@ -1,0 +1,20 @@
+.app {
+    border-radius: 20px;
+    margin-top: 100px;
+    padding: 15px;
+    background: rgb(255, 255, 255);
+    max-width: 350px;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+  }
+  
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }

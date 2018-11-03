@@ -1,97 +1,101 @@
+<div style="text-align:center">
+  <app-barra></app-barra>  
+</div>
+
 <div class="container app">
     <div class="row"> 
-      <div class="col-sm-8">
+      <div class="col-sm-12">
         <h1 class="text-center">
-          Informe de Proyectos Existentes
+          Informe de proyectos guardados
         </h1>
       </div>
       <div class="col-sm-4">
         <div class="alert alert-success alert-dismissable" *ngIf="msg">
-            <a href="existencia" class="close" (click)="closeAlert()">
+            <a href="existencia" class="close" >
             &times;
           </a>
           {{msg}}
         </div>
       </div>
+   
     </div>
-        <div class="row">
-        <div class="col-sm-10">
-        <h2>Proyectos Guardados</h2>
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Fecha Inicio</th>
-                <th>Fecha Fin</th>
-                <th>Avance</th>
-                <th>Administrar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let employee of employees; let i = index">
-                <td>{{employee.name}}</td>
-                <td>{{employee.tipo}}</td>
-                <td>{{employee.fechaI}}</td>
-                <td>{{employee.fechaF}}</td>
-                <td>{{employee.avance}}</td>
-                <td>
-                  <a (click)="editEmployee(i)" class="btn btn-success">
-                    Edit
-                  </a>
-                  
-                  <a (click)="deleteEmployee(i)" class="btn btn-danger">
-                    Delete
-                  </a>
-                </td>
-              </tr>
-              </tbody>
-          </table>  
-      </div>
-
-    </div>
-    
-
-    <div class="col-sm-4" [hidden]="hideUpdate">
-        <h2>Actualizar:</h2>
-        <form class="form-horizontal">
-          <div class="form-group">
-            Modificar Nombre
-             <input type="text" class="form-control" id="name"
-             name="name" [(ngModel)]="model2.name"
-             placeholder="Modificar el nombre">
-          </div>
-
-          <div class="form-group">
-              Modificar Tipo
-              <input type="text" class="form-control" id="tipo"
-               name="tipo" [(ngModel)]="model2.tipo"
-               placeholder="Modificar el tipo">
-          </div>
-
-          <div class="form-group">
-            Modificar Fecha Final
-            <input type="date" class="form-control" id="fechaF"
-            name="fechaF" [(ngModel)]="model2.fechaF"
-            placeholder="DD-MM-AAAA">
-          </div>
+    <br/>
+  
+  <div class="text-left">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Fecha inicio</th>
+          <th>Fecha fin</th>
+          <th>Avance</th>
+          <th>Administrar</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor="let employee of employees; let i = index">
+          <td>{{employee.name}}</td>
+          <td>{{employee.tipo}}</td>
+          <td>{{employee.fechaI}}</td>
+          <td>{{employee.fechaF}}</td>
+          <td>{{employee.avance}}</td>
+          <button style ="margin: 10px" class="btn btn-secondary text-white" >
+            <a (click)="editEmployee(i)" class="far fa-edit"> </a>
             
-          <div class="form-group">
-              Modificar Avance
-              <input type="text" class="form-control" id="avance"
-               name="avance" [(ngModel)]="model2.avance"
-               placeholder="Modificar el avance">
+          </button> 
+          <button class="btn btn-danger text-white">
+            <a (click)="deleteEmployee(i)" class="far fa-trash-alt"></a>
+          </button>
+        </tr>
+      </tbody>
+    </table>  
+  </div>
+  <div class="ventana">
+      <div class="col-sm-4" [hidden]="hideUpdate">
+          <h2>Actualizar:</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              Modificar Nombre
+               <input type="text" class="form-control" id="name"
+               name="name" [(ngModel)]="model2.name"
+               placeholder="Modificar el nombre">
             </div>
+  
+            <div class="form-group">
+                Modificar Tipo
+                <input type="text" class="form-control" id="tipo"
+                 name="tipo" [(ngModel)]="model2.tipo"
+                 placeholder="Modificar el tipo">
+            </div>
+  
+            <div class="form-group">
+              Modificar Fecha Final
+              <input type="date" class="form-control" id="fechaF"
+              name="fechaF" [(ngModel)]="model2.fechaF"
+              placeholder="DD-MM-AAAA">
+            </div>
+              
+            <div class="form-group">
+                Modificar Avance
+                <input type="text" class="form-control" id="avance"
+                 name="avance" [(ngModel)]="model2.avance"
+                 placeholder="Modificar el avance">
+              </div>
+  
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success" (click)="updateEmployee()">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+  </div>
 
-          <div class="form-group">
-            <div class="col-sm-10 col-sm-offset-2">
-              <button type="submit" class="btn btn-success" (click)="updateEmployee()">
-                Guardar
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    
 
 </div>
+

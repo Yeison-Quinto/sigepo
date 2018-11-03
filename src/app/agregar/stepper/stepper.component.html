@@ -1,0 +1,45 @@
+
+
+
+    <mat-horizontal-stepper >
+        <mat-step label="Proyecto">
+       
+                <app-proyecto></app-proyecto>
+         
+        
+          <br/>
+          <br/>
+          <div class="text-right"> 
+            <button style ="margin: 10px" mat-raised-button matStepperNext color="primary" >Siguiente</button>
+          </div>
+          
+        </mat-step>
+        <mat-step label="Gestores">
+
+            <app-gestores></app-gestores>
+
+            <br/>
+            <br/>
+            <div class="text-right">
+                <button style ="margin: 10px" mat-raised-button matStepperPrevious color="accent">Atras</button>
+                <button mat-raised-button matStepperNext color="primary">Siguiente</button>
+            </div>
+            
+          </mat-step>
+        <mat-step label="Informacion">
+           
+            <app-informacion></app-informacion>
+          
+            <br/>
+            <br/>
+            <div class="text-right">
+                <button style ="margin: 10px" mat-raised-button matStepperPrevious color="accent" >Atras</button>
+                <button mat-raised-button matStepperNext color="warn" (click)="alerta()"  >Guardar</button>
+           
+
+                  
+            </div>
+          </mat-step>
+      </mat-horizontal-stepper>
+
+

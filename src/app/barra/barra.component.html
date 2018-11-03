@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="inicio">Inicio</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       
+        <button mat-button [matMenuTriggerFor]="Proyecto">
+            <button mat-menu-item>Proyecto </button>
+        </button>
+        <mat-menu #Proyecto="matMenu">         
+          <a mat-menu-item href="agregar" >Crear</a>
+          <a mat-menu-item href="agregar" >Actualizar</a>
+          <a mat-menu-item href="agregar" >Avances</a>
+          <a mat-menu-item href="agregar" >borrar</a>        
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="Configuacionp">
+            <button  mat-menu-item>Configuación personal </button>
+          </button>
+        <mat-menu #Configuacionp="matMenu">
+          <button mat-menu-item>Actualizar</button>
+          <button mat-menu-item>Ayuda</button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="Configuraciong">
+            <button mat-menu-item>Configuración global </button>
+          </button>
+        <mat-menu #Configuraciong="matMenu">
+          <button mat-menu-item>Actualizar</button>
+          <button mat-menu-item>Ayuda</button>
+        </mat-menu>
+        
+
+                     
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button style ="margin: 10px" class="btn btn-outline- my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+      </div>
+     
+          
+      
+      <div class="button-row">
+        <button mat-mini-fab [matMenuTriggerFor]="menu">
+          <mat-icon aria-label="Example icon-button with a user icon">account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Ususario</button>
+          <button (click)="login" mat-menu-item >Cerrar sesión</button>
+        </mat-menu>
+        
+      </div>
+      
+  </nav>
+
+  
+  
+
+
+  

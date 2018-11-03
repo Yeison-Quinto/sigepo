@@ -1,0 +1,17 @@
+.app {
+    
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 30px;
+    background: #fff;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+    
+  }
+
+  

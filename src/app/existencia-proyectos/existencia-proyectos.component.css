@@ -1,10 +1,14 @@
 .app {
-    border-radius: 4px;
+    border-radius: 20px;
     margin-top: 20px;
     padding: 30px;
     background: #fff;
 }
 
 .mat-sort-header-container {
-    align-items : center;
+    align-items : left;
  }
+
+
+ 
+ 

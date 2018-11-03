@@ -1,72 +1,20 @@
+
+<div style="text-align:center">
+  <app-barra></app-barra>  
+</div>
+
 <div class="container app">
   <div class="row"> 
-    <div class="col-sm-8">
+    <div class="col-sm-12">
       <h1 class="text-center">
-        Informe de Proyectos Existentes
+          Agregar proyecto
       </h1>
     </div>
-    <div class="col-sm-4">
-      <div class="alert alert-success alert-dismissable" *ngIf="msg">
-          <a href="agregar" class="close" (click)="closeAlert()">
-          &times;
-        </a>
-        {{msg}}
-      </div>
-    </div>
-  </div>
-  <div class="row">
-  <div class="text-left">
-  <h2>Agregar proyecto:</h2>
-  <form class="form-horizontal">
-
-    <div class="form-group">
-      Nombre del proyecto:     
-      <input type="text" class="form-control" id="name"
-      name="name" [(ngModel)]="model.name"
-      placeholder="Nombre del Proyecto">
     </div>
 
-    <div class="form-group">
-      Tipo De Proyecto
-      <input type="text" class="form-control" id="tipo"
-      name="tipo" [(ngModel)]="model.tipo"
-      placeholder="Tipo:">
-    </div>
+
+  <app-stepper></app-stepper>
+
    
-    <div class="form-group">
-      Fecha de Inicio
-      <input type="date" class="form-control" id="fechaI"
-      name="fechaI" [(ngModel)]="model.fechaI"
-      placeholder="DD-MM-AAAA">
-      </div>
-
-    <div class="form-group">
-     Fecha Final
-      <input type="date" class="form-control" id="fechaF"
-      name="fechaF" [(ngModel)]="model.fechaF"
-      placeholder="DD-MM-AAAA">
-      </div>    
-      
-      <div class="form-group">
-          Porcentaje de Avance
-           <input type="text" class="form-control" id="avance"
-           name="avance" [(ngModel)]="model.avance"
-           placeholder="El Avance es de">
-      </div>
-
-      <div class="form-group">
-          <label for="exampleFormControlFile1">Agregar Archivos Del Proyecto</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-
-    <div class="form-group">
-      
-        <button type="submit" class="btn btn-success" (click)="addEmployee()">
-          Guardar Nuevo Proyecto
-        </button>
-      
-    </div>
-  </form>
-</div>
-  </div>
+  
 </div>

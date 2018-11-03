@@ -37,6 +37,8 @@ export class ExistenciaProyectosComponent implements OnInit {
     }
   }
   myValue;
+
+
   editEmployee(i):void {
     this.hideUpdate = false;
     this.model2.name = this.employees[i].name;
@@ -61,4 +63,9 @@ export class ExistenciaProyectosComponent implements OnInit {
   closeAlert():void {
     this.msg = '';
   }
+
+
+
+
+  
 }

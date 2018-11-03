@@ -1,43 +1,57 @@
-    <form>
-        <h3>
-           Inicio de Sesión
-        </h3>
-         
+
+<div class="container app">
+  
+  <div class="row"> 
+  
+    <div class="col-sm-12">
+      <h2 class="text-center">
+          Iniciar sesión
+      </h2>
+    </div>
+    
+  </div>
+
+    <div  class="text-center" >
         <p>
-          Ingrese sus datos de Acceso en el Sistema MARES
-        </p>
-        
-        <br/>
-  
-        <label for="user">Usuario:</label>
-        <input type="username" name="Usuario" id="username" placeholder=" " ngMogle>
-
-        <br/>
-        <br/>
-
-         <label for="pass">Contraseña:</label>
-        <input type="password" name="Contraseña" id="password" placeholder=" " ngMogle>
-       
-        <br/>
-        <br/>
-     
-        <label for="pass">Idioma:</label>
-        <select name="OS">
-          <option value="1">Español</option> 
-          <option value="2">Ingles</option> 
-          <option value="3">Japones</option>
-          <option value="10">Portugues</option> 
-          <option value="11">Italiano</option> 
-          <option value="12">Aleman</option> 
-        </select>
-        
-        <br/>
-        <br/>
-
-        <input class="btn btn-info bth-lg" type="reset" name="action" value="Acceder ">
+            Ingrese sus datos de acceso en el sistema MARES
+          </p>
           
-    </form>
+          <input class="form-control" type="text" placeholder="Usuario">
+          <br/>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+           
+          <br/>
+          <select class="custom-select" id="inputGroupSelect01">
+              <option value="1">Español</option> 
+              <option value="2">Ingles</option> 
+              <option value="3">Japones</option>
+              <option value="4">Portugues</option> 
+              <option value="5">Italiano</option> 
+              <option value="6">Aleman</option> 
+            </select>
+      
+      <br/>
+      <br/>
+      
+            <div class="form-check" >
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
+              </div>
+            <br/>
+      <br/>
+      
+
+      
+      <a mat-raised-button color="primary" href="inicio" >Inicio</a>
   
+    </div>
+  
+
+  
+  
+   
+   
+ 
 
   
 
